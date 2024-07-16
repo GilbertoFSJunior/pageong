@@ -1,0 +1,197 @@
+/* Resetando os padrões do navegador, possibilita trabalhar com posicionamento personalizado. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --default-border: 0.1rem solid rgba(0, 0, 0, 0.15);
+  --default-border-radius: 1.2rem;
+}
+
+aside h1 {
+  color: hotpink;
+  font-family: Roboto;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 75px;
+}
+
+aside span {
+  color: cadetblue;
+  font-family: Roboto;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 75px;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 1.6rem;
+}
+
+.content {
+  display: grid;
+  grid-template-areas:
+    ". . . . "
+    ". logo . form"
+    ". logo . form"
+    ". . . .";
+
+  gap: 8.5rem;
+}
+
+main {
+  grid-area: form;
+}
+
+aside {
+  grid-area: logo;
+}
+
+main {
+  width: 60rem;
+  height: 52rem;
+  border: var(--default-border);
+  border-radius: var(--default-border-radius);
+  padding: 4.4rem 5.7rem;
+  position: relative;
+}
+
+main h2 {
+  max-width: 43rem;
+  color: rgb(0, 0, 0);
+  font-family: Roboto;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 7.5rem;
+}
+
+main span {
+  max-width: 43rem;
+  color: hotpink;
+  font-family: Roboto;
+  font-size: 3.6rem;
+  font-weight: 600;
+  line-height: 7.5rem;
+}
+
+main .actions {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+main .actions a {
+  margin-top: 2.4rem;
+  color: antiquewhite;
+  font-size: 2.4rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--default-border-radius);
+  height: 5.5rem;
+  text-align: center;
+  background-color: darkcyan;
+}
+
+main .actions a + a {
+  background-color: hotpink;
+  margin-top: 2.4rem;
+}
+
+main footer p {
+  margin-top: 4.8rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.5rem;
+  text-align: center;
+}
+
+main footer a {
+  display: block;
+  margin-top: 0.9rem;
+  color: rgb(0, 0, 0);
+  font-size: 2rem;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5.5rem;
+  text-align: center;
+}
+
+/* Estilizando a pagina de cadastro */
+
+main header {
+  display: flex;
+  gap: 0 1.8rem;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+main header i {
+  font-size: 1.8rem;
+  color: #ff5678;
+}
+
+main form {
+  margin-top: 1.6rem;
+}
+
+main form label {
+  font-size: 2.4rem;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+main form :is(input, select) {
+  width: 489px;
+  height: 5.5rem;
+
+  background: #ffffff;
+  border: var(--default-border);
+  border-radius: var(--default-border-radius);
+}
+
+main form select {
+  appearance: none;
+}
+
+main form .select-div {
+  position: relative;
+}
+
+main form .select-div::after {
+  top: 1.6rem;
+  left: 1.6rem;
+  font-size: 2.2rem;
+  content: "\f107";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  position: absolute;
+  z-index: 1;
+  color: #35e6e9;
+}
+
+main form points {
+  position: relative;
+}
+
+main form input + button {
+  position: absolute;
+  right: -3.8rem;
+  top: calc(2.5rem + 2.3rem);
+  background-color: transparent;
+  border: none;
+  color: #35e6e9;
+  font-size: 2.4rem;
+  cursor: pointer;
+}
